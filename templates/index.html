@@ -1,0 +1,331 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+{% block title %} Menu Utama {% endblock %}
+
+
+{% block content %} 
+<!-- menu home -->
+<div class="container" id="home">
+    <div class="row">
+        <div class="col mt-5">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='img/s1.jpeg')}}" class="d-block w-100" alt="..." height="300">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Family friendly hotel</h5>
+                      <p>kami membuat tempat yang nyaman bagi keluarga anda.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/s2 (2).jpg')}}" class="d-block w-100" alt="..." height="300">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Romantinc place</h5>
+                      <p>awal mula hotel ini berawal dari kasih sayang.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/s3.jpg')}}" class="d-block w-100" alt="..." height="300">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Tempat yang nyaman</h5>
+                      <p>kami membuat tempat istirahat yang nyaman bagi perjalanan anda.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+</div>
+<!-- end menu home -->
+<!-- start tentang kami -->
+<div class="container">
+    <div class="row">
+        <div class="col text-center mt-5">
+            <h3>Tentang Kami</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-justify">
+            <p>UYU Hotel Purwakarta terletak di kota Purwakarta yang memberikan nuansa berbeda dengan konsep elegan, modern, dan stylish yang sangat cocok untuk liburan, pelancong bisnis, maupun keluarga. Kami memiliki 92 kamar, 1 restoran, dan 1 ruang pertemuan. UYU Hotel Purwakarta dekat dari Situ buleud, gerbang tol sadang, dan waduk Jati Luhur.</p>
+        </div>
+    </div>
+</div>
+<!-- end tentang kami -->
+<!-- start kamar -->
+<div class="container" id="kamar">
+    <div class="row">
+        <div class="col text-center mb-3">
+            <h3> Type Kamar</h3>
+        </div>
+    </div>
+    <div class="row">
+        <!-- start gambar kamar 1 baris 1 -->
+        <div class="col-md">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/k1.jpg')}}" class="card-img-top" alt="...">
+                <h4><div class="card-header">Tipe Superior
+                    <span class="float-end">Rp. 365.000.00,-</span>
+                </div></h4>
+                <div class="card-body">
+                <p class="card-text">Kamar berukuran luas 36m<sup>2</sup></p>
+                <p class="card-text">Kamar mandi shower</p>
+                <p class="card-text">WI-FI</p>
+                <p class="card-text">AC</p>
+                <p class="card-text">Kulkas</p>
+                <p class="card-text">Sarapan Gratis</p>
+                <p class="card-text">Kolam Renang</p>
+                <p class="card-text">LED TV 32 inch</p>
+                <div class="d-grid gap-2">
+                  <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                </div>
+              </div>
+        </div>
+    <!-- end gambar kamar 1 baris 1 -->
+     <!-- start gambar kamar 2 baris 1 -->
+        <div class="col-md">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/k4.jpg')}}" class="card-img-top" alt="...">
+                <h4><div class="card-header">Suite Room
+                    <span class="float-end">Rp. 220.000.00,-</span>
+                </div></h4>
+                <div class="card-body">
+                <p class="card-text">Kamar berukuran luas 28m<sup>2</sup></p>
+                <p class="card-text">Kamar mandi shower</p>
+                <p class="card-text">WI-FI</p>
+                <p class="card-text">AC</p>
+                <p class="card-text">Ruang Tamu</p>
+                <p class="card-text">LED TV 24 inch</p>
+                <div class="d-grid gap-2">
+                    <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                </div>
+              </div>
+        </div>
+        <!-- end gambar kamar 2 baris 1 -->
+    </div>
+    <div class="row">
+        <!-- start gambar kamar 1 baris 2 -->
+        <div class="col-md mb-3">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/k5.jpg')}}" class="card-img-top" alt="...">
+                <h4><div class="card-header">Tipe interconnecting
+                    <span class="float-end">Rp. 330.000.00,-</span>
+                </div></h4>
+                <div class="card-body">
+                <p class="card-text">Kamar berukuran luas 32m<sup>2</sup></p>
+                <p class="card-text">Kamar mandi shower</p>
+                <p class="card-text">WI-FI</p>
+                <p class="card-text">Kolam Renang</p>
+                <p class="card-text">Pusat Kebugaran</p>
+                <p class="card-text">AC</p>
+                <p class="card-text">LED TV 32 inch</p>
+                <div class="d-grid gap-2">
+                    <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                </div>
+              </div>
+        </div>
+    <!-- end gambar kamar 1 baris 2 -->
+     <!-- start gambar kamar 2 baris 2 -->
+        <div class="col-md mb-5">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/k2.jpg')}}" class="card-img-top" alt="...">
+                <h4><div class="card-header">Deluxe Room
+                    <span class="float-end">Rp. 400.000.00,-</span>
+                </div></h4>
+                <div class="card-body">
+                <p class="card-text">Kamar berukuran luas 38m<sup>2</sup></p>
+                <p class="card-text">Kamar mandi shower</p>
+                <p class="card-text">WI-FI</p>
+                <p class="card-text">AC</p>
+                <p class="card-text">Ruang Tamu</p>
+                <p class="card-text">Sarapan Gratis</p>
+                <p class="card-text">Salon</p>
+                <p class="card-text">Restoran</p>
+                <p class="card-text">LED TV 32 inch</p>
+                <div class="d-grid gap-2">
+                    <a href="#booking" class="btn btn-outline-info">Booking Now</a></div>
+                </div>
+              </div>
+        </div>
+        <!-- end gambar kamar 2 baris 2 -->
+    </div>
+    
+
+</div>
+<!-- end kamar -->
+<!-- start fasilitas -->
+<div class="container" id="fasilitas">
+    <div class="row">
+        <div class="col text-center mb-3">
+            <h3>Fasilitas</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- start gambar fasilitas 1 baris 1 -->
+        <div class="col-md">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/f4.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Ruang Rapat</h5>
+                  <p class="card-text">memiliki kapasitas 60 pax dengan luas 77 m2 dan dapat dibagi menjadi 2 (dua) ruangan yaitu : Pandawa Meeting Room dan Arjuna Meeting Room.</p>
+                </div>
+              </div>
+        </div>
+        <!-- end gambar fasilitas 1 baris 1 -->
+        <!-- start gambar fasilitas 2 baris 1 -->
+        <div class="col-md">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/f5.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Kolam Renang</h5>
+                  <p class="card-text">Ukuran kolam renang 3 x 7 meter dengan kedalaman 60 cm di bagian dangkal hingga 2,5 meter di bagian paling dalam.</p>
+                </div>
+              </div>
+        </div>
+        <!-- end gambar fasilitas 2 baris 1 -->
+        <!-- start gambar fasilitas 3 baris 1 -->
+        <div class="col-md mb-3">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/gy.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Gym</h5>
+                  <p class="card-text">Berolahraga di tempat fitness dengan penggunaan alat-alat yang tepat. Dengan Fasilitas Area angkat beban,Area olahraga kardio, dan Area olahraga lain.</p>
+                </div>
+              </div>
+        </div>
+        <!-- end gambar fasilitas 3 baris 1 -->
+    </div>
+    <div class="row">
+        <!-- start gambar fasilitas 1 baris 1 -->
+        <div class="col-md">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/lb.jpeg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Lobby</h5>
+                  <p class="card-text">teras hotel yang dilengkapi fasilitas lounge. Yaitu pertunjukan yang menghadirkan suasana bahagia, teduh, dan ceria.</p>
+                </div>
+              </div>
+        </div>
+        <!-- end gambar fasilitas 1 baris 1 -->
+        <!-- start gambar fasilitas 2 baris 1 -->
+        <div class="col-md">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/fb1.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Tempat Bermain Anak</h5>
+                  <p class="card-text">Dengan berbagai permainan seru yang tersedia, anak dapat memanfaatkan waktu luang, bergaul dengan anak sebaya, bermain,dan berekreasi.</p>
+                </div>
+              </div>
+        </div>
+        <!-- end gambar fasilitas 2 baris 1 -->
+        <!-- start gambar fasilitas 3 baris 1 -->
+        <div class="col-md mb-5">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/f3.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Spa</h5>
+                  <p class="card-text">Anda tidak perlu keluar hotel hanya sekedar untuk treatment atau perawatan badan. Dengan berbagaifasilitas SPA anda mendapatkan banyak manfaat kesehatan bagi tubuh anda.</p>
+                </div>
+              </div>
+        </div>
+        <!-- end gambar fasilitas 3 baris 1 -->
+    </div>
+</div>
+<!-- end fasilitas -->
+
+<!-- start booking kamar -->
+<div class="container" id="booking">
+    <div class="row">
+        <div class="col text-center mb-3">
+            <h4>Form Booking Room</h4>
+        </div>             
+    </div>
+    <div class="row">
+      <div class="col">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          
+          {% for message in messages %}
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Terima Kasih</strong> {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+          
+        {% endif %}
+      {% endwith %}
+
+      </div>
+    </div>
+
+    <div class="row">
+        <!-- start ini alamat hotel -->
+        <div class="col-lg-4">
+            <div class="card text-white bg-secondary">
+                <div class="card-body">
+                    <div class="card-title text-center"><h3>Hubungi Kami</h3></div>
+                </div>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h3>Kantor</h3></li>
+                <li class="list-group-item">Jl. Veteran</li>
+                <li class="list-group-item">Nagrikaler -Purwakarta</li>
+                <li class="list-group-item">Phone: 123456789</li>
+                <li class="list-group-item">email: hoteluyu@gmail.com</li>
+              </ul>            
+        </div>
+        <!-- end ini alamat hotel -->
+        <!-- start Form Pemesanan Kamar -->
+        <div class="col-lg-4">
+          <form action="/#booking" method="post">
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama Pemesan</label>
+            <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Anda" name="nama" autocomplete="off" required>
+          </div>
+          <div class="mb-3">
+            <label for="nomer_kamar" class="form-label">Nomor Kamar</label>
+            <input type="nomer_kamar" class="form-control" id="nomer_kamar" placeholder="Masukan Nomor Kamar" name="nomer_kamar" autocomplete="off" required>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <label for="jenis_kamar" class="form-label">Type Kamar</label>
+          <select class="form-select" aria-label="Default select example" name="jenis_kamar">
+            <option value=""></option>
+            <option value="interconnecting Room">interconnecting Room</option>
+            <option value="Superior Room">Superior Room</option>
+            <option value="Deluxe Room">Deluxe Room</option>
+            <option value="Suite Room">Suite Room</option>
+          </select>
+          <div class="mb-3">
+            <label for="tanggal_pesanan" class="form-label">Tanggal Check In</label>
+            <input type="date" class="form-control" id="tanggal_pesanan" name="tanggal_pesanan" required>
+          
+          </div>
+          <div class="d-grid gap-2">
+         <button type="submit" class="btn btn-success btn-lg btn-block" onclick="confirm('Anda Yakin')">Konfirmasi Pemesanan</button></div>
+        </div>
+      </form>
+        <!-- end Form Pemesanan Kamar -->
+
+    </div>
+</div>
+
+<!-- end booking kamar -->
+
+{% endblock %}
