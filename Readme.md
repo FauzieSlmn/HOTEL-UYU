@@ -41,6 +41,7 @@ pip install flask_mysqldb
 venv\Scripts\activate
 ```
 - jalankan program ini dengan run main.py
+- untuk membuka fitur admin silahkan ketikan http://127.0.0.1:5000/operator pada website
 
 ---
 ## DEMO 
